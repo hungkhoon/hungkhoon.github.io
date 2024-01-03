@@ -149,6 +149,29 @@ _layouts \
 
 You can also defines a hierarchy of layout. 
 
+
+### Enabling MathJax in Jekyll
+By default, Mathjax is not enabled for Jekyll website. To enable it, you have to append the following code to the bottom of `default.html` layout for the theme. For example, the path for the `minima` theme can be found here: `...\username\.local\share\gem\ruby\3.2.0\gems\minima-2.5.1\_layouts`.
+
+```
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [ ['$', '$'], ['\\(', '\\)'] ]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script
+  type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script> 
+  ```
+
+After that, you should be able to see the math being rendered properly in your Jekyll site.
+
 ### Variables
 
 * You can access the set of pre-defined variables as defined at <https://jekyllrb.com/docs/variables/>{:target="_blank"}. You can use these variables to display certain information about your site. You can also use it to improve the layout of your site. For example:
@@ -353,7 +376,7 @@ You can also defines a hierarchy of layout.
 ---
 ## D. Working with Git
 
-<img src="/assets/images/202310/2023-10-31_github-process.png" alt="image" style="width:400px;height:auto;">
+<img src="/assets/images/2023/2023-10-31_github-process.png" alt="image" style="width:400px;height:auto;">
 
 * **Installation**
   - Download and install [git](https://git-scm.com/downloads){:target="_blank"}. First, you need to configure your git account based on the instructions provided [here](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup){:target="_blank"}
@@ -420,7 +443,7 @@ You can also defines a hierarchy of layout.
 
       Then go to `Access` section of the sidebar, click `SSH and GPG keys`. Click on `New SSH key` or `Add SSH key`. In the title, add a descriptive label for the new key. For example, if you're using a personal laptop, you might call this key `"Personal laptop"`. Select the type of key, either authentication or signing. In the `"Key"` field, paste your public key and then click `Add SSH key`.
 
-      <img src="/assets/images/202310/2023-11-21_github_sshkey.png" alt="image" style="width:500px;height:auto;">      
+      <img src="/assets/images/2023/2023-11-21_github_sshkey.png" alt="image" style="width:500px;height:auto;">      
     
     - Test your SSH connection by using the following command. Reference: [link](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/testing-your-ssh-connection){:target="_blank"}
 
