@@ -32,7 +32,7 @@ To do this, the authors proposes to use a perform efficient fine-tuning on a SLM
 The author proposed the following strategies:
 * Perform efficient fine-tuning on a *small language model (SLM)*.
 * *Transfer* the task-specific characteristics from the fine-tuned SLM to a pre-trained large language model (LLM).
-* Use a minutuarized version of the LLM called the *bridge model* to fine-tune the parameter-efficient mode to work together with the LLM.
+* Use a minituarized version of the LLM called the *bridge model* to fine-tune the parameter-efficient model to work together with the LLM.
 
 The contributions of this work are as follows:
 * A gradient-free method to adapt parameter-efficient modules learned in SLM to a LLM.
